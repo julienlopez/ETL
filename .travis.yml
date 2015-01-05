@@ -12,5 +12,5 @@ before_script:
 script: make
 
 before_install:
-    sudo apt-get install gtest
-    sudo apt-get install gmock
+  - sudo apt-get install gtest
+  - sudo apt-get install gmock
