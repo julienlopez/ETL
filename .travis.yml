@@ -13,6 +13,7 @@ script: make
 before_install:
   - sudo apt-get install libgtest-dev
   - sudo apt-get install google-mock
+  - chmod 755 ./build_gtest.sh
   - pwd
   - ls -l
   - sudo ./build_gtest.sh
