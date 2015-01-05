@@ -13,4 +13,4 @@ script: make
 
 before_install:
   - sudo apt-get install libgtest-dev
-  - sudo apt-get install libgmock-dev
+  - sudo apt-get install google-mock
