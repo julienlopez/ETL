@@ -21,4 +21,4 @@ before_install:
   - chmod 755 ./build_gtest.sh
   - pwd
   - ls -l
-  - sudo ./build_gtest.sh
+  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8" sudo ./build_gtest.sh; else sudo ./build_gtest.sh; fi
