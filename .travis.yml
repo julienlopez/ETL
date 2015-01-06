@@ -22,4 +22,5 @@ before_install:
   - chmod 755 ./build_gtest.sh
   - pwd
   - ls -l
+  - /usr/bin/g++ -v
   - sudo ./build_gtest.sh
