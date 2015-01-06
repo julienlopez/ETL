@@ -1,5 +1,5 @@
 #!/bin/bash
 cd /usr/src/gtest
-sudo cmake . 
-sudo make
-sudo mv libg* /usr/lib/
+cmake . 
+make
+mv libg* /usr/lib/
