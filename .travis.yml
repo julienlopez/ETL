@@ -19,4 +19,4 @@ before_install:
   - sudo apt-get install libgtest-dev
   - sudo apt-get install google-mock
   - chmod 755 ./build_gtest.sh
-  - sudo ./build_gtest.sh
+  - sudo ci/build_gtest.sh
