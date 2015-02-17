@@ -3,6 +3,8 @@
 
 #include "deep_ptr.hpp"
 
+BEGIN_NAMESPACE_ETL
+
 BEGIN_NAMESPACE_UTILS
 
 template <class Impl> class pimpl
@@ -39,5 +41,7 @@ private:
 };
 
 END_NAMESPACE_UTILS
+
+END_NAMESPACE_ETL
 
 #endif // PIMPL_HPP

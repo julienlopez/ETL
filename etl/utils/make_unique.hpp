@@ -5,6 +5,8 @@
 
 #include "namespace_utils.hpp"
 
+BEGIN_NAMESPACE_ETL
+
 BEGIN_NAMESPACE_UTILS
 
 template <typename T, typename... Args> std::unique_ptr<T> make_unique(Args&&... args)
@@ -13,5 +15,7 @@ template <typename T, typename... Args> std::unique_ptr<T> make_unique(Args&&...
 }
 
 END_NAMESPACE_UTILS
+
+END_NAMESPACE_ETL
 
 #endif // MAKE_UNIQUE_HPP

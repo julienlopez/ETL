@@ -5,6 +5,8 @@
 
 #include "namespace_utils.hpp"
 
+BEGIN_NAMESPACE_ETL
+
 BEGIN_NAMESPACE_UTILS
 
 struct deep_ptr_basic_copy
@@ -97,5 +99,7 @@ private:
 };
 
 END_NAMESPACE_UTILS
+
+END_NAMESPACE_ETL
 
 #endif // DEEP_PTR_HPP
