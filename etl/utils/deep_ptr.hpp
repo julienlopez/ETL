@@ -55,6 +55,7 @@ public:
 	deep_ptr& operator=(const deep_ptr& p)
 	{
 		m_ptr.reset(p.m_ptr ? COPY_POLICY::clone(*p.m_ptr) : nullptr);
+        return *this;
 	}
 
 	deep_ptr& operator=(deep_ptr&&) = default;
