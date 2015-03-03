@@ -1,7 +1,7 @@
 #ifndef __DEFAULTFACTORYERRORPOLICY_HPP__
 #define __DEFAULTFACTORYERRORPOLICY_HPP__
 
-#include "type_traits/parametertrait.hpp"
+#include "type_traits/parameter_trait.hpp"
 
 #include <cassert>
 #include <stdexcept>
@@ -17,7 +17,7 @@ public:
 	class Exception : public std::exception
 	{
 	public:
-        Exception(typename const_parameter_trait<IdentifierType>::type id) : std::exception(), m_unknownId(id)
+        Exception(typename type_traits::const_parameter_trait<IdentifierType>::type id) : std::exception(), m_unknownId(id)
 		{}
 		
 		virtual const char* what()
@@ -25,7 +25,7 @@ public:
             return "Unknown type given to the factory.";
 		}
 		
-        typename const_parameter_trait<IdentifierType>::type getId() const
+        typename type_traits::const_parameter_trait<IdentifierType>::type getId() const
 		{
 			return m_unknownId;
 		}
@@ -35,7 +35,7 @@ public:
 	};
 	
 protected:
-    static ProductType onUnknownType(typename const_parameter_trait<IdentifierType>::type id)
+    static ProductType onUnknownType(typename type_traits::const_parameter_trait<IdentifierType>::type id)
 	{
 		throw Exception(id);
 	}
@@ -45,7 +45,7 @@ template<class IdentifierType, class ProductType>
 class assertion_factory_error_policy
 {
 protected:
-	static ProductType onUnknownType(typename const_parameter_trait<IdentifierType>::type id)
+    static ProductType onUnknownType(typename type_traits::const_parameter_trait<IdentifierType>::type)
 	{
 		assert(0 && "Unknown type given to the factory.");
 	}

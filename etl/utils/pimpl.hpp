@@ -21,10 +21,10 @@ protected:
 	~pimpl() = default;
 
 	pimpl(const pimpl&) = default;
-	pimpl(pimpl&& p) = default;
+    pimpl(pimpl&&) = default;
 
 	pimpl& operator=(const pimpl&) = default;
-	pimpl& operator=(pimpl&& p) = default;
+    pimpl& operator=(pimpl&&) = default;
 
 	Impl& get()
 	{
