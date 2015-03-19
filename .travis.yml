@@ -11,7 +11,7 @@ before_script:
 
 script: 
   - make
-  - cd compile_error_tests
+  - cd ../compile_error_tests
   - ./run_tests.sh
 
 before_install:
