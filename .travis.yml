@@ -9,7 +9,10 @@ before_script:
   - cd build
   - cmake ..
 
-script: make
+script: 
+  - make
+  - cd compile_error_tests
+  - ./run_tests.sh
 
 before_install:
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y

@@ -3,7 +3,7 @@
 
 namespace etl {
 
-namespace misc {
+namespace utils {
 
 template<class Derived, class Base>
 struct crtp_clone : Base
@@ -19,8 +19,9 @@ public:
     }
 };
 
-}
-}
+} //utils
+
+} //etl
 
 #endif
 

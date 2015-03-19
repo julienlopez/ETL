@@ -1,23 +1,24 @@
-#ifndef __NONINSTANCIABLE_HPP__
-#define __NONINSTANCIABLE_HPP__
+#ifndef __NONINSTANTIABLE_HPP__
+#define __NONINSTANTIABLE_HPP__
 
-#include "noncopiable.hpp"
+#include "noncopyable.hpp"
 
-BEGIN_NAMESPACE_ETL
+namespace etl {
 
-BEGIN_NAMESPACE_UTILS
+namespace utils {
 
 /**
   * \brief Defines a non-instantiable class.
   */
-class noninstantiable : private noncopiable
+class noninstantiable : private noncopyable
 {
 protected:
 	noninstantiable() = delete;
+	~noninstantiable() = delete;
 };
 
-END_NAMESPACE_UTILS
+} //utils
 
-END_NAMESPACE_ETL
+} //etl
 
 #endif //__NONINSTANCIABLE_HPP__
