@@ -35,6 +35,13 @@ TEST(TestFunctional, NegatorWithFreeFunctionAndLValueInt)
 	EXPECT_TRUE(is_odd(3));
 }
 
+TEST(TestFunctional, NegateWithFreeFunction)
+{
+	auto is_odd = etl::utils::functional::negate(&is_even_fct);
+	EXPECT_FALSE(is_odd(2));
+	EXPECT_TRUE(is_odd(3));
+}
+
 TEST(TestFunctional, NegatorWithFunctorObject)
 {
 	struct is_even_functor

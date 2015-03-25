@@ -30,7 +30,13 @@ namespace etl
 				function_t m_fct;
 			};
 			
-		} //utils
+			template<class RESULT, class ... Args>
+			negator<RESULT, Args ...> negate(RESULT(*fct)(Args...))
+			{
+				return negator<RESULT, Args ...>(fct);
+			}
+			
+		} //functional
 		
 	} //utils
 	
