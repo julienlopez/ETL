@@ -1,13 +1,13 @@
 #ifndef __SINGLETON_HPP__
 #define __SINGLETON_HPP__
 
-#include "noncopiable.hpp"
+#include "noncopyable.hpp"
 
-BEGIN_NAMESPACE_ETL
+namespace etl {
 
-BEGIN_NAMESPACE_UTILS
+namespace utils {
 
-template<class T> class singleton : public noncopiable {
+template<class T> class singleton : public noncopyable {
 public:
     static T& instance() {
         static T i;
@@ -18,8 +18,8 @@ protected:
     singleton() {}
 };
 
-END_NAMESPACE_UTILS
+} //utils
 
-END_NAMESPACE_ETL
+} //etl
 
 #endif // __SINGLETON_HPP__

@@ -6,9 +6,9 @@
 #include <cassert>
 #include <stdexcept>
 
-BEGIN_NAMESPACE_ETL
+namespace etl {
 
-BEGIN_NAMESPACE_UTILS
+namespace utils {
 
 template<class IdentifierType, class ProductType>
 class exception_factory_error_policy
@@ -35,9 +35,10 @@ public:
 	};
 	
 protected:
-    static ProductType onUnknownType(typename type_traits::const_parameter_trait<IdentifierType>::type id)
+    static ProductType* onUnknownType(typename type_traits::const_parameter_trait<IdentifierType>::type id)
 	{
 		throw Exception(id);
+        return nullptr;
 	}
 };
 
@@ -52,8 +53,8 @@ protected:
 
 };
 
-END_NAMESPACE_UTILS
+} //utils
 
-END_NAMESPACE_ETL
+} //etl
 
 #endif //__DEFAULTFACTORYERRORPOLICY_HPP__
