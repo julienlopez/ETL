@@ -10,7 +10,7 @@ BEGIN_NAMESPACE_UTILS
 template <class Impl> class pimpl
 {
 protected:
-	template <class... Args> pimpl(Args... args) : m_ptr(new Impl(std::forward<Args>(args)...))
+	template <class... Args> pimpl(Args&&... args) : m_ptr(new Impl(std::forward<Args>(args)...))
 	{
 	}
 
